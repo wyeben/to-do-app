@@ -6,10 +6,20 @@ saveButton.addEventListener("click", () => {
 
 
     let newDisplay = document.createElement("p");
+    newDisplay.classList.add('display-line');
+    let deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-btn');
+    deleteButton.innerText = 'delete';
 
     newDisplay.innerHTML = `${todoInput}:  ${todoDate}`;
 
-    document.querySelector('.display').appendChild(newDisplay)
+    let display = document.createElement('div');
+    display.classList.add('display-div')
+    display.appendChild(newDisplay);
+    display.appendChild(deleteButton);
+
+    let mainDisplay = document.querySelector('.display');
+    mainDisplay.appendChild(display);
 
     document.querySelector(".to-do-input").value = '';
     document.querySelector(".to-do-date").value = '';
