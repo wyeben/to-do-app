@@ -24,7 +24,11 @@ saveButton.addEventListener("click", () => {
     display.appendChild(deleteButton);
 
     let mainDisplay = document.querySelector('.display');
-    mainDisplay.appendChild(display);
+    if(display === ''){
+        alert('please enter to-do');
+    }else{
+        mainDisplay.appendChild(display);
+    }
 
     document.querySelector(".to-do-input").value = '';
     document.querySelector(".to-do-date").value = '';
@@ -36,6 +40,8 @@ saveButton.addEventListener("click", () => {
     checkIcon.addEventListener('click', () => {
         display.classList.toggle('completed');
     });
+
+    
 
 });
 

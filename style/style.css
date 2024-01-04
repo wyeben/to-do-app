@@ -1,9 +1,21 @@
 body{
-    background-color: bisque;
+    background: url(../image/adrian-korte-5gn2soeAc40-unsplash.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     
 }
-.display-div{
+
+.main-div{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+}
+.display-div{
+   display: flex;
     
 }
 
@@ -12,9 +24,8 @@ body{
 }
 
 .delete-btn{
-    background-color: red;
-    color: white;
-    border: none;
+    border-color: red;
+    color: red;
     border-radius: 5px;
     padding: 5px 15px;
     font-size: large;
@@ -23,12 +34,33 @@ body{
     margin-bottom: 5px;
 }
 
+.delete-btn:hover{
+    background-color: red;
+    color: white;
+}
+
+.delete-btn:active{
+    background-color: aquamarine;
+    color: black;
+    border: none;
+}
+
 .add-btn{
     padding: 13px;
-    background-color: green;
-    border: none;
-    color: white;
+    border-color: green;
+    color: green;
     cursor: pointer;
+}
+
+.add-btn:hover{
+    background-color: green;
+    color: white;
+}
+
+.add-btn:active{
+    background-color: aquamarine;
+    color: black;
+    border: none;
 }
 
 .to-do-input{
@@ -41,5 +73,28 @@ body{
 
 .completed{
     text-decoration: line-through;
+   
     
+}
+
+.check-btn{
+    border-color: rgb(60, 60, 1);
+    color: rgb(60, 60, 1);
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: large;
+    margin-left: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.check-btn:hover{
+    background-color: rgb(60, 60, 1);
+    color: white;
+}
+
+.check-btn:active{
+    background-color: antiquewhite;
+    border: none;
+    color: black;
 }
